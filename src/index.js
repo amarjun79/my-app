@@ -14,6 +14,7 @@ root.render(
     <ListItem />
     <ListItem />
     <ListItem />
+    <Footer />
   </div>
 );
 
