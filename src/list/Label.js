@@ -1,12 +1,14 @@
 import React from 'react';
 
-function Label(index){
+function Label(){
     var arr=[];
-    for(var i=0;i<index;i++){
+    for(var i=0;i<4;i++){
         arr.push(<label>Label {i}</label>);
     }
 
-    return arr.join("<br />");
+    return (arr.map(function(a){
+        return a;
+    }));
 }
 
 export default Label;

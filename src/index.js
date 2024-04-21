@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import ListItem from './list/ListItem';
+import ListItem from './List/ListItem';
 // import App from './App';
 
 const a=<div className="test">Test Div</div>  //React.CreateElement("div", { className : "test"}, "Test Div");
@@ -40,9 +40,9 @@ var arr = [ "Label 1", "Label 2", "Label 3", "Label 4", "Label 5" ]
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='listDiv'>
-    <ListItem index={1} />
-    <ListItem index={2} />
-    <ListItem index={3} />
-    <ListItem index={4} />
+    <ListItem />
+    <ListItem />
+    <ListItem />
+    <ListItem />
   </div>
 );
