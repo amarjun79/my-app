@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import ListItem from './List/ListItem';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div className='listDiv'>
+  <div className='my-app'>
+    <Header />
     <ListItem />
     <ListItem />
     <ListItem />
