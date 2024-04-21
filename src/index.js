@@ -2,20 +2,35 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import ListItem from './List/ListItem';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <div className='listDiv'>
+    <ListItem />
+    <ListItem />
+    <ListItem />
+    <ListItem />
+  </div>
+);
+
+
+
+
 // import App from './App';
 
-const a=<div className="test">Test Div</div>  //React.CreateElement("div", { className : "test"}, "Test Div");
+// const a=<div className="test">Test Div</div>  //React.CreateElement("div", { className : "test"}, "Test Div");
 
-const p="parent";
-const c="child";
-const pStyle={
-  color:"red", 
-  backgroundColor:"green",
-  borderRadius: "5px",
-  textAlign: "center"
-};
+// const p="parent";
+// const c="child";
+// const pStyle={
+//   color:"red", 
+//   backgroundColor:"green",
+//   borderRadius: "5px",
+//   textAlign: "center"
+// };
 
-var arr = [ "Label 1", "Label 2", "Label 3", "Label 4", "Label 5" ]
+// var arr = [ "Label 1", "Label 2", "Label 3", "Label 4", "Label 5" ]
 //React.CreateElement("div", { class: "parent"}, React.CreateElement("span", { className: "child"}, "This is a child"));
 
 // function labelClicked(value){
@@ -36,13 +51,3 @@ var arr = [ "Label 1", "Label 2", "Label 3", "Label 4", "Label 5" ]
 //       }
 //     </div>
 //   </div>;
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <div className='listDiv'>
-    <ListItem />
-    <ListItem />
-    <ListItem />
-    <ListItem />
-  </div>
-);
