@@ -1,20 +1,22 @@
 import React from 'react';
-import Label from './Label'
+import Label from './Label';
+import './ListItem.css'
 
-function ListItem(){
+function ListItem(props){
     return (
         <div className="list-item">
-            <hr />
             <div className="list-title">
                 <h3>
-                    My Title 0
+                    {props.title}
                 </h3>
             </div>
             <div className="list-description">
-                This is a description
+                {props.desc}
             </div>
             <div className="list-label">
-                <Label/>
+                <Label active={props.active}  onAction={() => {
+                    props.active?alert('Added to Cart'):alert('Item not available');
+                }}/>
             </div>
 
         </div>

@@ -2,15 +2,12 @@ import React from 'react';
 import './Label.css'
 
 class Label extends React.Component {
+    
     render() {
-        var arr=[];
-        for(var i=1;i<=4;i++){
-            arr.push(<label key={i} className='list-item-label'>Label {i}</label>);
-        }
-
-        return (arr.map(function(a){
-            return a;
-        }));
+        const props = this.props;    //object destructuring
+        const style=props.active ? {background: 'green'} : {background: 'red'};
+        const availability = props.active ? 'Available' : 'Currently Unavailable';
+        return <label key="1" className='list-item-label' style={style} onClick={props.onAction}>{availability}</label>;
     }
     
 }
