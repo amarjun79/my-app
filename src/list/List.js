@@ -2,28 +2,15 @@ import React from 'react';
 import ListItem from './ListItem'
 import Tools from '../Components/Tools'
 import './List.css';
+import * as data from '../data/products.json'
 
-let arr=[
-    {
-        title: "MAK",
-        description: "Genuine Mobile Accessories",
-        isActive: true
-    },
-    {
-        title: "GAIATOP",
-        description: "No Description Available",
-        isActive: false
-    },
-    {
-        title: "Red Gear",
-        description: "Computer accessories",
-        isActive: true
-    }
-];
+let arr=[];
 
 /* <ListItem title={obj.title} desc={obj.description} active={obj.isActive} />
 <ListItem title={title} desc={description} active={isActive} />
 <ListItem title="Red Gear" desc="Computer accessories" active={true} /> */
+
+
 
 class List extends React.Component {
     constructor(props) {
@@ -31,6 +18,13 @@ class List extends React.Component {
         this.state={
             data: arr
         };
+    }
+
+    componentDidMount() {
+       arr=data.default;
+       this.setState({
+        data: arr
+       });
     }
 
     onListChange = (e) => {
@@ -43,7 +37,7 @@ class List extends React.Component {
         });
     }
 
-    render(){
+    render() {
         return  <Tools onAction={this.onListChange}>
                     <div className='app-list'>
                         {

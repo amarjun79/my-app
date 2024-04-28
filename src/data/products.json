@@ -1,0 +1,17 @@
+[
+    {
+        "title": "MAK",
+        "description": "Genuine Mobile Accessories",
+        "isActive": true
+    },
+    {
+        "title": "GAIATOP",
+        "description": "No Description Available",
+        "isActive": true
+    },
+    {
+        "title": "Red Gear",
+        "description": "Computer accessories",
+        "isActive": false
+    }
+]

@@ -1,0 +1,17 @@
+.list-button{ 
+    margin: 5px;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;    
+    border-radius: 10px;
+    border: 1px rgb(84, 127, 221) solid;
+    background: fixed rgb(84, 127, 221);
+    color: white;
+}
+
+.list-button:hover {
+    border: 2px rgb(84, 127, 221) solid;
+    background: fixed white;
+    color: rgb(84, 127, 221);
+    padding: 4px 8px;
+}
