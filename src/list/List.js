@@ -16,7 +16,8 @@ class List extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            data: arr
+            data: arr,
+            activeState: 'all'
         };
     }
 
@@ -29,20 +30,31 @@ class List extends React.Component {
 
     onListChange = (e) => {
         const selectedItem=e.target.value;
-        const newLst = arr.filter((item) => {
-            return ((selectedItem==='available')?item.isActive:((selectedItem==='unavailable')?!item.isActive:true));
-        });
+        
         this.setState({
-            data: newLst
-        });
+            activeState: selectedItem
+        })
+    }
+
+    handleDelete = () => {
+        console.log("Deleted");
     }
 
     render() {
+        const {
+            data,
+            activeState
+        } = this.state;
+
+        const newLst = data.filter((item) => {
+            return ((activeState==='available')?item.isActive:((activeState==='unavailable')?!item.isActive:true));
+        });
+
         return  <Tools onAction={this.onListChange}>
                     <div className='app-list'>
                         {
-                            this.state.data.map(function (lst, i) {
-                                return <ListItem title={lst.title} desc={lst.description} active={lst.isActive} key={i} />;
+                            newLst.map(function (lst, i) {
+                                return <ListItem key={i} title={lst.title} desc={lst.description} active={lst.isActive} onDelete={this.handleDelete} />;
                             })
                         }
                     </div>

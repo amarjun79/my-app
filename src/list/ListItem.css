@@ -5,8 +5,15 @@
 }
 .list-title {
     color: black;
+    display: flex;
+    justify-content: space-between;
 }
 .list-description {
     color: grey;
     padding-bottom: 10px;
+}
+.list-item-delete {
+    cursor: pointer;
+    font-size: 12px;
+    color: blue;
 }

@@ -9,6 +9,7 @@ function ListItem(props){
                 <h3>
                     {props.title}
                 </h3>
+                <label className="list-item-delete" onClick={props.onDelete}>Delete</label>
             </div>
             <div className="list-description">
                 {props.desc}
